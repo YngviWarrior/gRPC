@@ -1,0 +1,5 @@
+https://grpc.io/docs/languages/go/quickstart/
+
+sudo apt-get -y protobuf-compiler
+
+export PATH="$PATH:$(go env GOPATH)/bin"

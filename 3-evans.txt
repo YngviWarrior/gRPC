@@ -1,0 +1,25 @@
+// Go lib to interact with gRPC server
+https://github.com/ktr0731/evans
+
+docker run --rm -v "$(pwd):/mount:ro" \
+    ghcr.io/ktr0731/evans:0.10.9 \
+      --path ./proto \
+      --proto course_category.proto \
+      --host 127.0.0.1 \
+      --port 50051 \
+      repl
+
+# Check the registry if you're using a different go version.
+go install github.com/ktr0731/evans@0.10.9 
+
+# Find your go PATH.
+go env PATH
+
+# Add this path to your system.
+export PATH=$PATH:/your/go/env/PATH
+
+# Para espelhar o servidor gRPC
+evans -r repl
+
+# Para acessar o sqlite3
+sqlite3 ./db.sqlite
