@@ -1,0 +1,2 @@
+# Use this command every time that you change the .proto files.
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
